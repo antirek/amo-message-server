@@ -1,0 +1,17 @@
+{
+  "name": "amo-message-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:admin-web": "node apps/admin-web/index",
+    "start:incoming-messages-api": "node apps/incoming-messages-api/index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mobilon-dev/amotop": "^0.1.44",
+    "express": "^4.19.2",
+    "pug": "^3.0.3"
+  }
+}
