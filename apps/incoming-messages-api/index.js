@@ -1,8 +1,14 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const config = require('config');
 
-router.post('/', (req, res) => {
+const routes = require('./routes');
 
-})
+const app = express();
 
-module.exports = router
+app.use(express.json({limit: '2MB'}));
+
+app.use(routes);
+
+app.listen(config.get('apps.admin-web.port'), () => {
+  console.log('started with config', config);
+});
