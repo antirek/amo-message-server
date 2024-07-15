@@ -8,4 +8,15 @@ module.exports = {
     },
   },
   mongodb: 'mongodb://mongodb',
-}
+  channel: {
+    channelCode: '',
+    channelId: '',
+    channelBotId: '',
+    secretKey: '',
+  },
+  app: {
+    clientId: '',
+    clientSecret: '',
+    widgetCode: ''
+  },
+};
