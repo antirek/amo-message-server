@@ -9,6 +9,6 @@ app.use(express.json({limit: '2MB'}));
 
 app.use(routes);
 
-app.listen(config.get('apps.admin-web.port'), () => {
+app.listen(config.get('apps.incoming-messages-api.port'), () => {
   console.log('started with config', config);
 });
