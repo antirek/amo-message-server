@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@mobilon-dev/amotop": "^0.1.44",
+    "config": "^3.3.12",
     "express": "^4.19.2",
     "mongoose": "^8.5.1",
     "pug": "^3.0.3"
