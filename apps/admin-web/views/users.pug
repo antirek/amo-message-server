@@ -1,0 +1,15 @@
+include template
+
+h3 Пользователи
+
+table(border="1")
+  tr
+    th id
+    th имя
+    th amojo_id
+  each user in users
+    tr 
+      td= user.id
+      td= user.name
+      td= user.amojo_id
+
