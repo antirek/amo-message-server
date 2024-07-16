@@ -1,0 +1,21 @@
+include template
+
+h3 Чаты контакта
+
+p= contact.name
+p= contact.id
+
+table(border="1")
+  tr
+    th id
+    th chat_id 
+    th contact_id
+    th action
+  each chat in chats
+    tr 
+      td= chat.id
+      td= chat.chat_id
+      td= chat.contact_id
+      td
+        a(href="/chats/" + chat.contact_id +"/" + chat.chat_id + '/sendText') отправить текст
+      

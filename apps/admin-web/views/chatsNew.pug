@@ -1,0 +1,16 @@
+include template
+
+h4 Создать чат и отправить сообщение
+
+form(action="/chats/addNewAndSendText" method="post")
+  label контакт *
+  select(name="contactId")
+    each contact in contacts
+      option(value=contact.id)= contact.name
+  br
+  label пользователь *
+  select(name="amojoUserId")
+    each user in users
+      option(value=user.amojo_id)= user.name
+  br
+  input(type="submit" value="Отправить")
