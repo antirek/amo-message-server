@@ -1,6 +1,6 @@
 const express = require('express');
 
-const {AmoConversation} = require('../../../models')
+const {AmoConversation, Message} = require('../../../models')
 
 const router = express.Router();
 
@@ -36,8 +36,19 @@ router.post('/messages/:scopeId', async (req, res) => {
     console.log('new amo conversation added');
   }
 
-  
-  
+  const messageId = data.message.message.id;
+  const message = await Message.findOne({messageId});
+  if (message) {
+    return;
+  }
+
+  const messageData = {
+    time: data.message.timestamp,
+    messageId,
+    type: data.message.message.type,
+    text: data.message.message.text,
+  }
+  await Message.create(messageData);  
 });
 
 module.exports = router;
