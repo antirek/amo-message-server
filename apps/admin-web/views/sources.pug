@@ -1,0 +1,36 @@
+include template
+
+h3 Источники
+
+table(border="1")
+  tr
+    th название
+    th воронка
+    th external_id
+    th origin_code
+  each source in sources
+    tr 
+      td= source.name
+      td= source.pipeline_id
+      td= source.external_id
+      td= source.origin_code
+
+
+
+h4 Добавить источник
+
+form(action="sources/add" method="post")
+  label название (name) *
+  input(type="text" name="name")
+  br
+  label external_id *
+  input(type="text" name="external_id")
+  br
+  label воронка (pipeline_id)
+  input(type="text" name="pipeline_id")
+  br
+  label origin_code
+  input(type="text" name="origin_code")
+  br
+  
+  input(type="submit" value="Добавить")

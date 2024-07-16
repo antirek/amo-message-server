@@ -16,6 +16,7 @@ app.use('/static', express['static'](path.join(__dirname, '../../node_modules'))
 app.use('/public', express['static'](path.join(__dirname, '/public')));
 
 app.use(express.json({limit: '2MB'}));
+app.use(express.urlencoded({linit: '2MB'}));
 
 app.use(routes);
 
