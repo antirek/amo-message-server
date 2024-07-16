@@ -1,0 +1,19 @@
+include template
+
+h3 Messages
+
+table(border="1")
+  tr
+    th messageId
+    th time
+    th type
+    th text
+    th action
+  each message in messages
+    tr 
+      td= message.messageId
+      td= message.time
+      td= message.type
+      td= message.text
+      td 
+        a(href="/messages/" + message.messageId + '/markRead') mark read

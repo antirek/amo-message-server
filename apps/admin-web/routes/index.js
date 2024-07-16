@@ -6,6 +6,7 @@ const usersRouter = require('./users');
 const conversationsRouter = require('./conversations');
 const contactsRouter = require('./contacts');
 const chatsRouter = require('./chats');
+const messagesRouter = require('./messages');
 
 const router = express.Router();
 
@@ -14,11 +15,12 @@ router.get('/', (req, res) => {
   res.render('index');
 });
 
+router.use('/users', usersRouter);
 router.use('/sources', sourcesRouter);
 router.use('/account', accountRouter);
-router.use('/users', usersRouter);
 router.use('/conversations', conversationsRouter);
 router.use('/contacts', contactsRouter);
 router.use('/chats', chatsRouter);
+router.use('/messages', messagesRouter);
 
 module.exports = router;
