@@ -14,4 +14,12 @@ router.get('/', async (req, res) => {
   res.render('conversations', {conversations});
 });
 
+router.get('/delete/:_id', async (req, res) => {
+  const _id = req.params._id
+  await AmoConversation.findOneAndDelete({_id: _id});
+
+  res.redirect('/conversations');
+});
+
+
 module.exports = router;

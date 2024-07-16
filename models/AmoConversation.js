@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const AmoConversationSchema = new mongoose.Schema({
-  contactId: String,
-  contactPhone: String,
+  receiverId: String,
+  receiverPhone: String,
   conversationId: String,
   sourceExternalId: String,
   channelCode: String,

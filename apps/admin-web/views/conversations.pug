@@ -5,16 +5,19 @@ h3 Conversations
 table(border="1")
   tr
     th _id
-    th contactId
-    th contactPhone
+    th receiverId
+    th receiverPhone
     th conversationId
     th sourceExternalId
     th channelCode
+    th action
   each conversation in conversations
     tr 
       td= conversation._id
-      td= conversation.contactId
-      td= conversation.contactPhone
+      td= conversation.receiverId
+      td= conversation.receiverPhone
       td= conversation.conversationId
       td= conversation.sourceExternalId
       td= conversation.channelCode
+      td 
+        a(href="/conversations/delete/" + conversation._id) del
