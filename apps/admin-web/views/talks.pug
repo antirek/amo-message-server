@@ -1,0 +1,18 @@
+include template
+
+h3 Беседы (amoCRM)
+
+table(border="1")
+  tr
+    th talk_id
+    th chat_id
+    th status
+    th origin
+    th contact_id
+  each talk in talks
+    tr
+      td= talk.talk_id
+      td= talk.chat_id
+      td= talk.status
+      td= origin
+      td= contact_id
