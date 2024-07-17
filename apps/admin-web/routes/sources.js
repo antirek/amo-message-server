@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
   const response = await amoApiClient.getSources();
   console.log('response', response);
   // const sources = [{name: 'source1'}];
-  const sources = response._embedded.sources;
+  const sources = response?._embedded?.sources || [];
   res.render('sources', {sources});
 });
 
