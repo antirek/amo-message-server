@@ -1,0 +1,18 @@
+include template
+
+h3 События (amoCRM)
+
+table(border="1")
+  tr
+    th id
+    th created_at
+    th type
+    th entity_type
+    th entity_id
+  each event in events
+    tr
+      td= event.id
+      td= event.created_at
+      td= event.type
+      td= event.entity_type
+      td= event.entity_id

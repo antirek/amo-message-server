@@ -8,6 +8,7 @@ const contactsRouter = require('./contacts');
 const chatsRouter = require('./chats');
 const messagesRouter = require('./messages');
 const talksRouter = require('./talks');
+const eventsRouter = require('./events');
 
 const router = express.Router();
 
@@ -24,5 +25,6 @@ router.use('/contacts', contactsRouter);
 router.use('/chats', chatsRouter);
 router.use('/messages', messagesRouter);
 router.use('/talks', talksRouter);
+router.use('/events', eventsRouter);
 
 module.exports = router;
