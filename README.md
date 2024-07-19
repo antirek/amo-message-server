@@ -1,7 +1,26 @@
 # amo-message-server
 
+## установка
+
+> git clone https://github.com/antirek/amo-message-server
+
+> cd amo-message-server
+
+> npm install
+
+> pm2 start ecosystem.config.js
 
 
+## запуск
+
+modify config/default.js
+
+open http://localhost:3000
+
+
+## Видео
+
+- [Видео: amoCRM chat API](https://youtu.be/f31UVtn7EJI)
 
 
 -----------------------
